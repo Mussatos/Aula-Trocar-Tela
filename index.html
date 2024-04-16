@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button id="ir-rosa">Ir para Rosa</button>
+    <button id="ir-verde">Ir para Verde</button>
+
+    <div id="aplicacao">
+
+    </div>
+
+    <script src="controllers/RosaController.js"></script>
+    <script src="controllers/VerdeController.js"></script>
+    <script src="views/RosaView.js"></script>
+    <script src="views/VerdeView.js"></script>
+    <script src="rotulo.js"></script>
+
+    <script> 
+
+        const rosa = document.querySelector("#ir-rosa")
+
+        const verde = document.querySelector("#ir-verde")
+
+        // new RosaController(); 
+        //new VerdeController();
+        // Comentar CTRL K CTRL C
+
+        rosa.addEventListener("click", () =>{
+            new rotulo().goTo("rosa");
+        })
+
+        verde.addEventListener("click", () =>{
+            new rotulo().goTo("verde");
+        })
+
+    </script>
+</body>
+</html>
